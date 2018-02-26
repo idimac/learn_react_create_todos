@@ -4,13 +4,19 @@ import { connect } from 'react-redux';
 import { select } from '../actions/selectToDo';
 import { saveTitle } from '../actions/saveToDoTitle'; //For updating selected TodoTitle window
 
+
 class TodosList extends Component {
     showToDoS() {
         return this.props.todos.map((todo) => {
-            return (
-                <li className="liItem" onClick={()=>this.props.select(todo)}
-                key={todo.id}>{todo.id} - {todo.text}</li>
-            )
+            if(todo.completed) {
+                return (<li className="liItem completed" onClick={()=>this.props.select(todo)}
+                    key={todo.id}>{todo.id} - {todo.text}</li>)
+            } else {
+                return (
+                    <li className="liItem" onClick={()=>this.props.select(todo)}
+                    key={todo.id}>{todo.id} - {todo.text}</li>
+                )
+            }
         })
     };
     render () {

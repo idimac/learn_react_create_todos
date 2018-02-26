@@ -1,5 +1,6 @@
 .mainPage {
-    background-color: #90f6fa;
+    background-color: #5e8381;
+    background-image: url('http://sf.co.ua/12/10/wallpaper-2348714.jpg');
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -10,21 +11,49 @@
 }
 .listTodos {
     box-shadow: 3px 2px 5px rgba(0,0,0,0.5);
-    background-color:#90f6fa;
+    background-color:#5e8381;
     justify-content: center;
     display: flex;
+    margin: 20px auto;
+    width: 500px;
+    border-radius: 10px;
+    overflow: scroll;
 }
 .listTodos :first-child {
     list-style-type: none;
 }
 .moreDetails {
     text-align: center;
-    background-color: #97e3e5;
+    background-color: #5e8381;
     text-justify: center;
+    width: 500px;
+    overflow: scroll;
+    margin: 10px auto;
+    border-radius: 20px;
 }
 .liItem {
    cursor: pointer;
 }
 .createZone {
     text-align: center;
+}
+button {
+    background-color: #5e8381;
+    border: none;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgb(42, 85, 126)
+}
+input {
+    background-color: #5e8381;
+    border: 1px solid rgb(83, 73, 73);
+    outline: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: rgb(60, 80, 55);
+}
+.completed {
+    text-decoration:line-through
 }

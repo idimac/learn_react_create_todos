@@ -7,7 +7,7 @@ export default function (state=null, action) {
             let edit = action.payload.editTitle; 
             return {...action.payload, editTitle: !edit};
             break;
-            case "TODO_EDIT_MORE":
+        case "TODO_EDIT_MORE":
             let edited = action.payload.editMore; 
             return {...action.payload, editMore: !edited};
             break;

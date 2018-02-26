@@ -7,11 +7,18 @@ class CreatingZone extends Component {
     render () {
         return (
             <div className="createZone">
-                <input ref="CreateInput" type="text" />
+                <input onKeyPress={(e) => {
+                    if(this.refs.CreateInput.value) {
+                        if(e.key === "Enter") {
+                        this.props.create(this.refs.CreateInput.value); 
+                        this.refs.CreateInput.value = '';
+                }}}}  ref="CreateInput" type="text" />
                 <button className="createToDo" 
                     onClick={() => {
-                        this.props.create(this.refs.CreateInput.value); 
-                        this.refs.CreateInput.value = ''}
+                        if(this.refs.CreateInput.value) {
+                            this.props.create(this.refs.CreateInput.value); 
+                            this.refs.CreateInput.value = ''}
+                    }
                     }
                 >Create ToDo</button>
             </div>
