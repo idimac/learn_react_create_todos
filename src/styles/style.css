@@ -1,0 +1,30 @@
+.mainPage {
+    background-color: #90f6fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.logo, .details {
+    display: flex;
+    justify-content: center;
+}
+.listTodos {
+    box-shadow: 3px 2px 5px rgba(0,0,0,0.5);
+    background-color:#90f6fa;
+    justify-content: center;
+    display: flex;
+}
+.listTodos :first-child {
+    list-style-type: none;
+}
+.moreDetails {
+    text-align: center;
+    background-color: #97e3e5;
+    text-justify: center;
+}
+.liItem {
+   cursor: pointer;
+}
+.createZone {
+    text-align: center;
+}
