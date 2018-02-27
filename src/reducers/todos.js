@@ -1,10 +1,18 @@
-import { loadState } from './localStorage';
-
-let id = 0;
 export default function (state=[], action) {
     switch (action.type) {
         case "TODO_CREATE": 
-            return [...state, {text:action.payload, completed: false, id: ++id,
+            function createId () {
+                var id = 1;
+                for(var i = 0; i < state.length; i++) {
+                    if (id = state[i].id) {
+                        id++;
+                    } else if (!(id = state[i].id)) {
+                        break;
+                    }
+                }
+                return id;
+            }
+            return [...state, {text:action.payload, completed: false, id: createId() ,
             more: action.payload, editTitle: false, editMore: false}]
             break;
         case "TODO_DELETE": 
