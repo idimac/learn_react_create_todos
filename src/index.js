@@ -9,7 +9,7 @@ import WebPage from './components/webPage';
 import { loadState, saveState } from './reducers/localStorage';
 
 const initialState = loadState();
-const store = createStore (allReducers, initialState, window.__REDUX_DEVTOOLS_EXTENSIONS__ && window.__REDUX_DEVTOOLS_EXTENSIONS__());
+const store = createStore (allReducers, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 store.subscribe((state)=> {
